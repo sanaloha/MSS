@@ -1,0 +1,5 @@
+com\security\controller\GreetingController.class
+com\security\config\AuthorizationServerConfig.class
+com\security\SpringBootResourceServerApplication.class
+com\security\config\ResourceServer.class
+com\security\config\WebSecurityConfiguration.class

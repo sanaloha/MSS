@@ -1,0 +1,23 @@
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Get Greetings</title>
+</head>
+<body>
+    <h3 style="color: red;">Get Greetings</h3>
+
+    <div id="getGreetings">
+        <form:form action="http://localhost:8081/oauth/authorize"
+            method="post" modelAttribute="greeting">
+            <p>
+                <label>Enter Security Details</label>
+                 <input type="text" name="response_type" value="code" /> 
+                 <input type="text" name="client_id" value="iphone" />
+                 <input type="text" name="redirect_uri" value="http://localhost:8090/showGreetings" />
+                 <input type="text" name="scope" value="read" /> 
+                 <input type="SUBMIT" value="Get Greetings" />
+        </form:form>
+    </div>
+</body>
+</html>

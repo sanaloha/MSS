@@ -1,0 +1,43 @@
+package com.security.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode
+@ToString
+public class Employee {
+
+    String id;
+    String name;
+    
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String empId) {
+        this.id = empId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setEmpName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee [empId=" + empId + ", empName=" + empName + "]";
+    }
+    //String designation;
+    //Integer salary;
+}

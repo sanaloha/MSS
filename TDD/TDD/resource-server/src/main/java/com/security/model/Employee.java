@@ -6,6 +6,10 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Data
 @Builder
@@ -13,7 +17,26 @@ import lombok.ToString;
 @AllArgsConstructor
 @EqualsAndHashCode
 @ToString
+
+@Entity
+@Table(name = "employee", catalog = "msemployee")
 public class Employee {
+
+    @Id
+    @Column(name = "id",nullable = false)
+    Integer id;
+
+    @Column(name = "name",nullable = false)
+    String name;
+
+    @Column(name = "designation")
+    String designation;
+
+    @Column(name = "salary")
+    Integer salary;
+}
+
+/*public class Employee {
 
     String id;
     String name;
@@ -40,4 +63,4 @@ public class Employee {
     }
     //String designation;
     //Integer salary;
-}
+}*/

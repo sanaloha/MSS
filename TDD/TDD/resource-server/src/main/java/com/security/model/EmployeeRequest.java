@@ -10,8 +10,8 @@ import lombok.*;
 @ToString
 public class EmployeeRequest {
 
-    String id;
+    Integer id;
     String name;
     String designation;
-    //Integer salary;
+    Integer salary;
 }

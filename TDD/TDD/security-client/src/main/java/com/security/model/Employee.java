@@ -1,7 +1,26 @@
 package com.security.model;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
-
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode
+@ToString
 public class Employee {
+
+    Integer id;
+    String name;
+    String designation;
+    Integer salary;
+}
+
+/*public class Employee {
 
     String id;
     String name;
@@ -28,4 +47,4 @@ public class Employee {
     }
     //String designation;
     //Integer salary;
-}
+}*/
